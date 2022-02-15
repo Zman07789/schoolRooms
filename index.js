@@ -1,12 +1,14 @@
-var school = {
-    classRooms: 10,
-    students: 100,
-    teachers: 10,
-    subjects: ['science', 'math', 'biology', 'Literature', 'gym', 'History'],
-    checkNumStudentsPerClass: function() {
+var school = new Object();
+    school.name ='Yollo Schools',
+    school.classRooms = 10,
+    school.students = 100,
+    school.teachers = 10,
+    school.checkNumStudentsPerClass= function() {
         return this.students / this.classRooms;
-    }
-}
+    };
 
-var el = document.getElementById('students');
-el.textContent = school.checkNumStudentsPerClass();
+var elName = document.getElementById('schoolName');
+elName.textContent = school.name;
+
+var elSize = document.getElementById('classSize');
+elSize.textContent = school.checkNumStudentsPerClass();
